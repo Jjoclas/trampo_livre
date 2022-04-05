@@ -1,6 +1,8 @@
+import uuid
 from django.db import models
-
+from rest_framework import serializers
 class Usuarios(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     nome = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     senha = models.CharField(max_length=100)
@@ -11,3 +13,8 @@ class Usuarios(models.Model):
 
     def __str__(self):
         return self.nome
+
+class UsuariosSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuarios
+        fields = ('id', 'nome', 'email', 'telefone', 'data_cadastro', 'data_atualizacao', 'ativo')

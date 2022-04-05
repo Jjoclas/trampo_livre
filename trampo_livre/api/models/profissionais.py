@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 
 class Profissionais(models.Model):
     usuario = models.ForeignKey('Usuarios', on_delete=models.CASCADE)
@@ -13,3 +14,8 @@ class Profissionais(models.Model):
 
     def __str__(self):
         return self.usuario.nome
+
+class ProfissionaisSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profissionais
+        fields = ('usuario', 'titulo', 'descricao', 'valor_hora', 'foto', 'cpf', 'data_atualizacao', 'ativo', 'setor')

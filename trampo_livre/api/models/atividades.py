@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 
 class Atividades(models.Model):
     titulo = models.CharField(max_length=100, null=False)
@@ -16,3 +17,8 @@ class Atividades(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class AtividadesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Atividades
+        fields = '__all__'
