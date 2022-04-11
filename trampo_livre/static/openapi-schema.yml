@@ -1,0 +1,999 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /usuarios/:
+    get:
+      operationId: listUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Usuarios'
+          description: ''
+      tags:
+      - usuarios
+    post:
+      operationId: createUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuarios'
+          description: ''
+      tags:
+      - usuarios
+  /usuarios/{id}/:
+    get:
+      operationId: retrieveUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this usuarios.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuarios'
+          description: ''
+      tags:
+      - usuarios
+    put:
+      operationId: updateUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this usuarios.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuarios'
+          description: ''
+      tags:
+      - usuarios
+    patch:
+      operationId: partialUpdateUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this usuarios.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Usuarios'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuarios'
+          description: ''
+      tags:
+      - usuarios
+    delete:
+      operationId: destroyUsuarios
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A UUID string identifying this usuarios.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - usuarios
+  /agenda/:
+    get:
+      operationId: listAgendas
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Agenda'
+          description: ''
+      tags:
+      - agenda
+    post:
+      operationId: createAgenda
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agenda'
+          description: ''
+      tags:
+      - agenda
+  /agenda/{id}/:
+    get:
+      operationId: retrieveAgenda
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this agenda.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agenda'
+          description: ''
+      tags:
+      - agenda
+    put:
+      operationId: updateAgenda
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this agenda.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agenda'
+          description: ''
+      tags:
+      - agenda
+    patch:
+      operationId: partialUpdateAgenda
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this agenda.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Agenda'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agenda'
+          description: ''
+      tags:
+      - agenda
+    delete:
+      operationId: destroyAgenda
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this agenda.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - agenda
+  /profissionais/:
+    get:
+      operationId: listProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Profissionais'
+          description: ''
+      tags:
+      - profissionais
+    post:
+      operationId: createProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissionais'
+          description: ''
+      tags:
+      - profissionais
+  /profissionais/{id}/:
+    get:
+      operationId: retrieveProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this profissionais.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissionais'
+          description: ''
+      tags:
+      - profissionais
+    put:
+      operationId: updateProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this profissionais.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissionais'
+          description: ''
+      tags:
+      - profissionais
+    patch:
+      operationId: partialUpdateProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this profissionais.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profissionais'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profissionais'
+          description: ''
+      tags:
+      - profissionais
+    delete:
+      operationId: destroyProfissionais
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this profissionais.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - profissionais
+  /setor/:
+    get:
+      operationId: listSetors
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Setor'
+          description: ''
+      tags:
+      - setor
+    post:
+      operationId: createSetor
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Setor'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+          description: ''
+      tags:
+      - setor
+  /setor/{id}/:
+    get:
+      operationId: retrieveSetor
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this setor.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+          description: ''
+      tags:
+      - setor
+    put:
+      operationId: updateSetor
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this setor.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Setor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+          description: ''
+      tags:
+      - setor
+    patch:
+      operationId: partialUpdateSetor
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this setor.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Setor'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Setor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Setor'
+          description: ''
+      tags:
+      - setor
+    delete:
+      operationId: destroySetor
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this setor.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - setor
+  /avaliacoes/:
+    get:
+      operationId: listAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Avaliacoes'
+          description: ''
+      tags:
+      - avaliacoes
+    post:
+      operationId: createAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Avaliacoes'
+          description: ''
+      tags:
+      - avaliacoes
+  /avaliacoes/{id}/:
+    get:
+      operationId: retrieveAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this avaliacoes.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Avaliacoes'
+          description: ''
+      tags:
+      - avaliacoes
+    put:
+      operationId: updateAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this avaliacoes.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Avaliacoes'
+          description: ''
+      tags:
+      - avaliacoes
+    patch:
+      operationId: partialUpdateAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this avaliacoes.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Avaliacoes'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Avaliacoes'
+          description: ''
+      tags:
+      - avaliacoes
+    delete:
+      operationId: destroyAvaliacoes
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this avaliacoes.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - avaliacoes
+  /atividades/:
+    get:
+      operationId: listAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Atividades'
+          description: ''
+      tags:
+      - atividades
+    post:
+      operationId: createAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atividades'
+          description: ''
+      tags:
+      - atividades
+  /atividades/{id}/:
+    get:
+      operationId: retrieveAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this atividades.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atividades'
+          description: ''
+      tags:
+      - atividades
+    put:
+      operationId: updateAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this atividades.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atividades'
+          description: ''
+      tags:
+      - atividades
+    patch:
+      operationId: partialUpdateAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this atividades.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Atividades'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Atividades'
+          description: ''
+      tags:
+      - atividades
+    delete:
+      operationId: destroyAtividades
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this atividades.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - atividades
+components:
+  schemas:
+    Usuarios:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 100
+        senha:
+          type: string
+          writeOnly: true
+        email:
+          type: string
+          format: email
+          maxLength: 100
+        telefone:
+          type: string
+          maxLength: 100
+        data_cadastro:
+          type: string
+          format: date-time
+          readOnly: true
+        data_atualizacao:
+          type: string
+          format: date-time
+          readOnly: true
+        ativo:
+          type: boolean
+      required:
+      - nome
+      - senha
+      - email
+      - telefone
+    Agenda:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        data_inicio:
+          type: string
+          format: date-time
+        data_fim:
+          type: string
+          format: date-time
+        repeticao:
+          enum:
+          - diaria
+          - dias uteis
+          - semanal
+          - mensal
+          - nunca
+          type: string
+        hora_inicio:
+          type: string
+          nullable: true
+        hora_fim:
+          type: string
+          nullable: true
+        atividade:
+          type: integer
+      required:
+      - data_inicio
+      - data_fim
+      - repeticao
+      - atividade
+    Profissionais:
+      type: object
+      properties:
+        usuario:
+          type: string
+        titulo:
+          type: string
+          maxLength: 100
+        descricao:
+          type: string
+          maxLength: 1000
+        valor_hora:
+          type: string
+          format: decimal
+          multipleOf: 0.01
+          maximum: 100000000
+          minimum: -100000000
+        foto:
+          type: string
+          format: binary
+          nullable: true
+        cpf:
+          type: string
+          maxLength: 11
+        data_atualizacao:
+          type: string
+          format: date-time
+          readOnly: true
+        ativo:
+          type: boolean
+        setor:
+          type: integer
+      required:
+      - usuario
+      - titulo
+      - descricao
+      - valor_hora
+      - cpf
+      - setor
+    Setor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 100
+        descricao:
+          type: string
+          maxLength: 1000
+        ativo:
+          type: boolean
+      required:
+      - nome
+      - descricao
+    Avaliacoes:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        titulo:
+          type: string
+          maxLength: 100
+        descricao:
+          type: string
+          maxLength: 1000
+        atividade:
+          type: integer
+        nota:
+          type: integer
+      required:
+      - titulo
+      - descricao
+      - atividade
+      - nota
+    Atividades:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        titulo:
+          type: string
+          maxLength: 100
+        descricao:
+          type: string
+          maxLength: 1000
+        valor:
+          type: string
+          format: decimal
+          multipleOf: 0.01
+          maximum: 100000000
+          minimum: -100000000
+        horas_realizadas:
+          type: integer
+        data_cadastro:
+          type: string
+          format: date-time
+          readOnly: true
+        ativo:
+          type: boolean
+        profissional:
+          type: integer
+        contratante:
+          type: string
+      required:
+      - titulo
+      - descricao
+      - valor
+      - horas_realizadas
+      - profissional
+      - contratante

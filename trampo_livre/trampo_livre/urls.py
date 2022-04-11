@@ -25,6 +25,7 @@ from api import views
 
 router = routers.DefaultRouter()
 router.register(r'usuarios', views.UsuariosViewSet)
+router.register(r'agenda', views.AgendaViewSet)
 router.register(r'profissionais', views.ProfissionaisViewSet)
 router.register(r'setor', views.SetorViewSet)
 router.register(r'avaliacoes', views.AvaliacoesViewSet)

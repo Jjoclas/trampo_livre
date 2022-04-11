@@ -5,6 +5,8 @@ from .models.atividades import AtividadesSerializer, Atividades
 from .models.profissionais import ProfissionaisSerializer, Profissionais
 from .models.setor import SetorSerializer, Setor
 from .models.usuarios import UsuariosSerializer, Usuarios
+from .models.agenda import AgendaSerializer, Agenda
+
 
 
 class UsuariosViewSet(viewsets.ModelViewSet):
@@ -13,6 +15,13 @@ class UsuariosViewSet(viewsets.ModelViewSet):
     """
     queryset = Usuarios.objects.all()
     serializer_class = UsuariosSerializer
+
+class AgendaViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Agenda.objects.all()
+    serializer_class = AgendaSerializer
 
 class ProfissionaisViewSet(viewsets.ModelViewSet):
     """
