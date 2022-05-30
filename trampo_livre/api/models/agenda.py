@@ -15,8 +15,8 @@ class RepeticaoTypes(Enum):
 
 class Agenda(models.Model):
     atividade = models.ForeignKey('Atividades', on_delete=models.CASCADE)
-    data_inicio = models.DateTimeField(null=False)
-    data_fim = models.DateTimeField()
+    data_inicio = models.DateField(null=False)
+    data_fim = models.DateField(null=True)
     repeticao = models.CharField(max_length=10, choices=RepeticaoTypes.choices())
     hora_inicio = models.TimeField(null=True)
     hora_fim = models.TimeField(null=True)
